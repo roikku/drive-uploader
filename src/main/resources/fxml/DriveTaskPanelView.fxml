@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import io.uploader.drive.gui.factory.CellDriveTaskProgressFactory?>
+
+<?import javafx.geometry.Insets?>
+
+
+<GridPane alignment="CENTER" hgap="10.0" vgap="10.0"
+    xmlns:fx="http://javafx.com/fxml"
+    fx:controller="io.uploader.drive.gui.controller.DriveTaskPanelViewController">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>  
+        <Label style="-fx-font: NORMAL 20 Tahoma;" text="Current Tasks"                
+        maxWidth="Infinity" GridPane.hgrow="ALWAYS" GridPane.columnIndex="0" GridPane.rowIndex="0">
+    </Label>
+    <TableView fx:id="tableTaskView" 
+    	maxWidth="Infinity"
+        maxHeight="Infinity"
+        minWidth="200.0"
+        minHeight="100.0"
+        GridPane.hgrow="ALWAYS"
+        GridPane.vgrow="ALWAYS" 
+        GridPane.columnIndex="0"  GridPane.rowIndex="1">
+    		<columnResizePolicy><TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/></columnResizePolicy>
+         <columns>
+          	<TableColumn fx:id="progressTotalColumn" text="Progress (total)" prefWidth="150" maxWidth="150" minWidth="150"  sortable="false">
+          	</TableColumn>
+          	<TableColumn fx:id="progressCurrentColumn" text="Progress (current)" prefWidth="150"  maxWidth="150" minWidth="150" sortable="false">
+          	</TableColumn>          	
+          	<TableColumn fx:id="statusColumn" text="Status" prefWidth="500" minWidth="100" sortable="false">   
+          	</TableColumn>
+          	<TableColumn fx:id="optionsColumn" text="Options" prefWidth="70"  maxWidth="70"  minWidth="70" sortable="false">  
+          	</TableColumn>
+     	</columns> 
+    </TableView>
+    <VBox spacing="10" alignment="bottom_left" maxWidth="Infinity" GridPane.hgrow="ALWAYS" GridPane.columnIndex="0" GridPane.rowIndex="2">
+	    <!-- 
+	    <HBox spacing="10" alignment="center_left"> 
+	    	<Label text="Destination:" /> 
+	        <TextField fx:id="driveDirectory" promptText="Destination" prefWidth="130"/> 
+	        <Button text="Change" onAction="#changeDriveDirectory"/>
+	    </HBox>
+	     --> 
+	    <HBox spacing="10" alignment="bottom_right">
+	          <Button text="Add Task" onAction="#addDriveTask"/>
+	    </HBox> 
+    </VBox> 
+</GridPane>

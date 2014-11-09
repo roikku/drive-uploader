@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.*?>
+
+<GridPane fx:controller="io.uploader.drive.gui.controller.AboutViewController" 
+    xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+<padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
+
+	<Text fx:id="titleField" text="Drive Uploader" style="-fx-font: NORMAL 20 Tahoma;"
+	        GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
+
+	<VBox spacing="10" alignment="top_center"
+			GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.rowSpan="3"> 
+		<ImageView fx:id="imgField"> </ImageView> 
+	</VBox>
+
+    <Text style="-fx-font: NORMAL 15 Tahoma;"
+        GridPane.columnIndex="1" GridPane.rowIndex="2"
+        text="© 2014 Loic Merckel"/>
+      
+    <!--    
+    <Text style="-fx-font: NORMAL 15 Tahoma;"
+        GridPane.columnIndex="1" GridPane.rowIndex="3"
+        text="..."/>   
+    -->
+        
+    <Hyperlink text="http://drive.uploader.io" GridPane.columnIndex="1" GridPane.rowIndex="3"
+    	onAction="#onLink"
+    ></Hyperlink>     
+
+	<HBox spacing="10" alignment="bottom_center" 
+       GridPane.columnIndex="0" GridPane.rowIndex="7" GridPane.columnSpan="2">
+       <Button text="Close" prefWidth="100" onAction="#onClose"/>
+	</HBox>
+
+
+</GridPane>

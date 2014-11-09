@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+
+
+<GridPane alignment="CENTER" hgap="10.0" vgap="10.0"
+    xmlns:fx="http://javafx.com/fxml"
+    fx:controller="io.uploader.drive.gui.controller.ErrorReportViewController">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>  
+        <Label style="-fx-font: NORMAL 20 Tahoma;" text="Error Report"                
+        maxWidth="Infinity" GridPane.hgrow="ALWAYS" GridPane.columnIndex="0" GridPane.rowIndex="0">
+    </Label>
+    <TableView fx:id="tableErrorView" 
+    	maxWidth="Infinity"
+        maxHeight="Infinity"
+        minWidth="400.0"
+        minHeight="300.0"
+        GridPane.hgrow="ALWAYS"
+        GridPane.vgrow="ALWAYS"
+        GridPane.columnIndex="0"  GridPane.rowIndex="1">
+    		<columnResizePolicy><TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/></columnResizePolicy>
+         <columns>    
+            <TableColumn fx:id="errLevelColumn" text="" prefWidth="25" minWidth="25" maxWidth="32">   
+          	</TableColumn>	   
+            <TableColumn fx:id="srcColumn" text="Source" prefWidth="250" minWidth="100">   
+          	</TableColumn>	
+            <TableColumn fx:id="destColumn" text="Destination" prefWidth="200" minWidth="100">   
+          	</TableColumn>
+          	<TableColumn fx:id="errColumn" text="Message" prefWidth="250" minWidth="100">   
+          	</TableColumn>
+     	</columns> 
+    </TableView>
+    <VBox spacing="10" alignment="bottom_left" maxWidth="Infinity" GridPane.hgrow="ALWAYS" GridPane.columnIndex="0" GridPane.rowIndex="2">
+	    <HBox spacing="10" alignment="bottom_right">
+	          <Button text="Close" onAction="#onClose"/>
+	    </HBox> 
+    </VBox> 
+</GridPane>

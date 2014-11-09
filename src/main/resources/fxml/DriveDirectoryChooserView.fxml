@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.*?>
+
+
+<GridPane alignment="CENTER" hgap="10.0" vgap="10.0"
+    xmlns:fx="http://javafx.com/fxml"
+    minWidth="300.0"
+    minHeight="300.0"
+    fx:controller="io.uploader.drive.gui.controller.DriveDirectoryChooserViewController">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>  
+    <TreeView fx:id="driveTreeView" 
+    	maxWidth="Infinity"
+        maxHeight="Infinity"
+        minWidth="200.0"
+        minHeight="150.0"
+        GridPane.hgrow="ALWAYS"
+        GridPane.vgrow="ALWAYS" 
+        GridPane.columnIndex="0"  GridPane.rowIndex="0" GridPane.columnSpan="2"
+    	prefHeight="300" prefWidth="250" />
+		
+	    <VBox spacing="10" alignment="bottom_left" maxWidth="Infinity" GridPane.hgrow="ALWAYS" 
+	    	GridPane.rowIndex="1" GridPane.columnIndex="1" >
+		    <HBox spacing="10" alignment="bottom_right">
+		       <Button text="Cancel" prefWidth="100" onAction="#onCancel"/>
+		       <Button text="Select" prefWidth="100" onAction="#onSelect"/>
+		    </HBox> 
+	    </VBox> 
+</GridPane>
+
+<!--  
+<AnchorPane id="AnchorPane" 
+	prefHeight="320" 
+	prefWidth="300" 
+	minWidth="200.0"
+    minHeight="100.0"
+   	maxWidth="Infinity"
+    maxHeight="Infinity"    
+	xmlns:fx="http://javafx.com/fxml/1" 
+	fx:controller="io.uploader.drive.gui.controller.DriveDirectoryChooserViewController">
+	
+	<TreeView fx:id="driveTreeView" AnchorPane.topAnchor="5" AnchorPane.rightAnchor="5" AnchorPane.leftAnchor="5" prefHeight="300" prefWidth="250" />
+		
+	<HBox spacing="10" alignment="bottom_right" 
+       AnchorPane.bottomAnchor="5" AnchorPane.rightAnchor="5" AnchorPane.leftAnchor="5">
+       <Button text="Cancel" prefWidth="100" onAction="#onCancel"/>
+       <Button text="Select" prefWidth="100" onAction="#onSelect"/>
+	</HBox>
+
+	
+</AnchorPane>
+-->

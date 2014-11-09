@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox id="vbox" prefHeight="400" prefWidth="800"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="io.uploader.drive.gui.controller.MainMenuController">
+    <MenuBar fx:id="menuBar" onKeyPressed="#handleKeyInput">
+      <menus>
+         <Menu text="File" fx:id="fileMenu">
+            <items>
+               <MenuItem text="Exit" onAction="#onExit"/>
+            </items>
+         </Menu>
+         <Menu fx:id="accountMenu" text="Account">
+            <items>
+               <MenuItem text="Forget My Account" onAction="#onForgetAccount"/>
+            </items>
+         </Menu>
+         <Menu text="Settings">
+            <items>
+               <MenuItem text="Proxy" onAction="#onProxySetting"/>
+            </items>
+         </Menu>         
+         <Menu text="Help">
+            <items>
+               <MenuItem text="About" onAction="#onAbout"/>
+            </items>
+         </Menu>
+      </menus>
+   </MenuBar>  
+</VBox>

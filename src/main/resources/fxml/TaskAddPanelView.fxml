@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+<GridPane fx:controller="io.uploader.drive.gui.controller.TaskAddPanelViewController" 
+    xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+<padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
+
+	<Text text="Task Definition" style="-fx-font: NORMAL 20 Tahoma;"
+	        GridPane.columnIndex="0" GridPane.rowIndex="0"
+	        GridPane.columnSpan="2"/>
+ 
+    <Label text="Upload the local directory "
+        GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+ 
+    <TextField fx:id="srcField" prefWidth="250"
+        GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+ 
+    <Label text="into the Drive's directory " prefWidth="200"
+        GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+ 
+    <TextField fx:id="destField" 
+        GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+	<Button text="Select" prefWidth="100" GridPane.columnIndex="2" GridPane.rowIndex="2" onAction="#onSelectSourceDirectory"/>
+	
+	<Button text="Change" prefWidth="100" GridPane.columnIndex="2" GridPane.rowIndex="3" onAction="#onChangeDestinationDirectory" />
+
+	<CheckBox fx:id="checkBoxOverwrite" text="Overwrite existing files" GridPane.columnIndex="0" GridPane.rowIndex="5" GridPane.columnSpan="2" />
+
+	<HBox spacing="10" alignment="bottom_right" 
+       GridPane.columnIndex="1" GridPane.rowIndex="7" GridPane.columnSpan="2">
+       <Button text="Cancel" prefWidth="100" onAction="#onCancel"/>
+       <Button text="Add" prefWidth="100" onAction="#onAdd"/>
+	</HBox>
+
+
+</GridPane>
