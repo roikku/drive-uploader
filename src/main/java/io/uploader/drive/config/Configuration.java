@@ -42,7 +42,7 @@ public enum Configuration implements HasConfiguration {
 	private final String defaultXmlPath ; 
 	
 	private final String appName = "Drive Uploader" ;
-	private final String appVersion = "1.0" ;
+	private final String appVersion = "1.1-SNAPSHOT" ;
 	
 	@Override
 	public String getAppName ()
